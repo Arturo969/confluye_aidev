@@ -1,4 +1,6 @@
 ---
+import { SITE_ENV } from 'astro:env/server';
+import { siteMode } from '../lib/config/site-env';
 import type { Locale } from '../lib/i18n/routes';
 
 interface Props {
@@ -7,6 +9,18 @@ interface Props {
 }
 
 const { lang, title } = Astro.props;
+const { indexable, showPreviewBanner } = siteMode(SITE_ENV);
+
+const previewBanner = {
+  es: {
+    label: 'Aviso de versión de prueba',
+    text: 'Versión de prueba: el formulario no envía ni guarda datos.',
+  },
+  en: {
+    label: 'Preview version notice',
+    text: 'Preview version: the form does not send or store any data.',
+  },
+}[lang];
 ---
 
 <!doctype html>
@@ -14,9 +28,25 @@ const { lang, title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {!indexable && <meta name="robots" content="noindex, nofollow" />}
     <title>{title}</title>
   </head>
   <body>
+    {showPreviewBanner && (
+      <aside class="preview-banner" aria-label={previewBanner.label}>
+        {previewBanner.text}
+      </aside>
+    )}
     <slot />
   </body>
 </html>
+
+<style>
+  .preview-banner {
+    padding: 0.5rem 1rem;
+    background: #173f42;
+    color: #fbf7f0;
+    font-size: 1rem;
+    text-align: center;
+  }
+</style>

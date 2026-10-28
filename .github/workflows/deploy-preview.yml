@@ -1,0 +1,47 @@
+# Preview en GitHub Pages (T-004, ADR-0004): formulario demo, noindex y banner de prueba.
+# Solo el job deploy eleva permisos (SR-07); el entorno github-pages solo acepta main.
+name: deploy-preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: withastro/action@a8b97df764791eb61fbf3338ef713b0e61ae05c5 # v6.1.4
+        env:
+          SITE_ENV: preview
+          SITE_URL: https://arturo969.github.io
+          BASE_PATH: /confluye_aidev/
+          PUBLIC_FORM_ADAPTER: demo
+
+  deploy:
+    name: deploy
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write # publicar el artefacto en GitHub Pages
+      id-token: write # token OIDC que exige deploy-pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
