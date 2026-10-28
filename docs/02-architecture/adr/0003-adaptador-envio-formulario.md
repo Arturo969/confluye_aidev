@@ -1,6 +1,6 @@
 # ADR-0003: Puerto/adaptador de envío del formulario seleccionado en build
 
-- Estado: Aceptado 2026-10-28 · Fecha: 2026-10-27
+- Estado: Aceptado 2026-10-28 · Fecha: 2026-10-27 · Núcleo implementado en T-005 (`src/lib/form/*`, `src/lib/config/deploy-guard.ts`, `src/integrations/build-guard.ts`); el marcador demo vive en `src/lib/form/markers.ts` para que la guardia no importe el adaptador
 
 ## Contexto
 - Sin backend propio: el envío se delega a un proveedor externo aún no elegido (candidatos: Netlify Forms, Formspree, Web3Forms, con captcha Turnstile/hCaptcha). Ahora el formulario funciona en **modo demo** (preview en GitHub Pages): no sale ningún dato a la red (RF-10).
