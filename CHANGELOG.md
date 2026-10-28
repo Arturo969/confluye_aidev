@@ -10,5 +10,6 @@ Formato [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) · versionad
 - Plan: backlog (26 tareas, 6 hitos) y estrategia de pruebas (2026-10-28).
 ### Added (código)
 - T-001: esqueleto Astro 7.4.2 + TS strictest, i18n es (`/`) / en (`/en/`), `site`/`base` por entorno, Vitest (cobertura v8 ≥ 90 % en `src/lib`) y Playwright (2026-10-28).
+- T-002: toolchain de calidad — ESLint 10 (typescript-eslint, astro + a11y estricto, no-unsanitized, import-x/no-cycle, reglas de dependencia), Prettier, Stylelint mobile-first; tests que prueban que las reglas fallan (2026-10-28).
 ### Removed
 - Botón de WhatsApp retirado del alcance por decisión del cliente (2026-10-27).

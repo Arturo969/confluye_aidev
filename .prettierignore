@@ -1,0 +1,18 @@
+# Prettier solo para código y configuración
+dist/
+.astro/
+coverage/
+playwright-report/
+test-results/
+node_modules/
+tests/fixtures/
+package-lock.json
+docs/
+.aidev/
+.github/pull_request_template.md
+CHANGELOG.md
+CLAUDE.md
+*.jpeg
+*.jpg
+*.png
+*.woff2

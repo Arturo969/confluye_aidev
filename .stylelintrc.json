@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-html/astro"],
+  "rules": {
+    "media-feature-range-notation": "prefix",
+    "media-feature-name-disallowed-list": [
+      ["max-width"],
+      {
+        "message": "Mobile-first (RF-13): usa min-width; max-width no se permite en media queries."
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@ Proyecto gestionado con **AIDEV** (track: critical). Estado y siguiente paso: `d
 - Instalar: `npm ci`
 - Ejecutar: `npm run dev` · build: `npm run build` (`astro check && astro build`) · `npm run preview`
 - Tests: `npm test` (vitest) · `npm run test:build` (build real con/sin `BASE_PATH`) · e2e + a11y: `npm run e2e` (Playwright + axe, 3 viewports) · `npm run lhci` (Lighthouse CI)
-- Lint / tipos: `npm run lint` (eslint + stylelint + prettier) · `npm run typecheck`
+- Lint / tipos: `npm run lint` (eslint + stylelint + prettier) · `npm run lint:fix` · `npm run format` · `npm run typecheck`. Reglas clave (probadas en `tests/unit/lint-rules.test.ts`): no-unsanitized, no-console en `src/`, adaptadores solo vía `factory`, no-cycle, solo `min-width` en media queries
 - Env: `PUBLIC_FORM_ADAPTER` (`demo`), `PUBLIC_FORM_ENDPOINT`, `SITE_ENV` (`preview`/`production`), `SITE_URL`, `BASE_PATH` — ver `.env.example`. En Git Bash, exporta `MSYS_NO_PATHCONV=1` al pasar `BASE_PATH` (si no, MSYS lo convierte en ruta de Windows)
 
 ## Convenciones
