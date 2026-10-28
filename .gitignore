@@ -1,0 +1,33 @@
+# Secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+
+# Dependencias y builds
+node_modules/
+vendor/
+.venv/
+venv/
+__pycache__/
+*.pyc
+dist/
+build/
+target/
+bin/
+obj/
+coverage/
+.next/
+.nuxt/
+
+# Sistema / editores
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Temporales AIDEV
+.aidev-tmp/

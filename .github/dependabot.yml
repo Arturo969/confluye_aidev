@@ -1,0 +1,7 @@
+# Adaptar "package-ecosystem" al stack en /aidev:release (npm, pip, maven, gradle, nuget, gomod, cargo, composer, docker...).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

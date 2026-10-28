@@ -1,0 +1,44 @@
+# CI base de AIDEV para confluye.
+# Los jobs de seguridad funcionan con cualquier stack. El job "build-test" se adapta
+# al stack en /aidev:release (agente devops-engineer): instalar, lint, tipos, tests, cobertura.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  secrets-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dependency-review:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pendiente de adaptar al stack
+        run: |
+          echo "Reemplazar por: setup del lenguaje, instalar deps (lockfile), lint, typecheck, tests con cobertura."

@@ -1,0 +1,39 @@
+{
+  "name": "confluye",
+  "track": "critical",
+  "facets": {
+    "interfaz": [
+      "web"
+    ],
+    "despliegue": [
+      "cloud"
+    ],
+    "datos": [
+      "sin-estado"
+    ],
+    "arquitectura": [
+      "script"
+    ],
+    "ia": [
+      "ninguna"
+    ],
+    "integracion": [
+      "apis-terceros"
+    ],
+    "restricciones": [],
+    "regulacion": [
+      "datos-personales"
+    ],
+    "stack": [
+      "astro",
+      "typescript",
+      "css"
+    ]
+  },
+  "profiles": [
+    "web-frontend",
+    "integrations"
+  ],
+  "created": "2026-10-27",
+  "framework": "aidev"
+}

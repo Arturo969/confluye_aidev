@@ -1,0 +1,17 @@
+.git
+.github
+.aidev
+.aidev-tmp
+.claude
+docs
+node_modules
+.venv
+venv
+__pycache__
+coverage
+dist
+build
+*.md
+.env
+.env.*
+!.env.example
