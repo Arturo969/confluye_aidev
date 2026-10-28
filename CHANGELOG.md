@@ -12,5 +12,6 @@ Formato [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) · versionad
 - T-001: esqueleto Astro 7.4.2 + TS strictest, i18n es (`/`) / en (`/en/`), `site`/`base` por entorno, Vitest (cobertura v8 ≥ 90 % en `src/lib`) y Playwright (2026-10-28).
 - T-002: toolchain de calidad — ESLint 10 (typescript-eslint, astro + a11y estricto, no-unsanitized, import-x/no-cycle, reglas de dependencia), Prettier, Stylelint mobile-first; tests que prueban que las reglas fallan (2026-10-28).
 - T-003: CI en GitHub Actions (quality, e2e, supply-chain, secrets, workflow-lint, dependency-review), acciones por SHA, Dependabot npm/actions con cooldown, `npm run licenses` con excepción documentada de sharp (2026-10-28).
+- T-004: deploy de la preview en GitHub Pages (`deploy-preview.yml`), `SITE_ENV` tipado con `astro:env`, `noindex` + `robots.txt` + banner de prueba fuera de producción (2026-10-28).
 ### Removed
 - Botón de WhatsApp retirado del alcance por decisión del cliente (2026-10-27).

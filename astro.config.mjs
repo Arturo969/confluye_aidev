@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 
 // site/base llegan por entorno (ADR-0004): GitHub Pages usa una subruta; producción, la raíz.
 const site = process.env.SITE_URL || 'http://localhost:4321';
@@ -15,5 +15,15 @@ export default defineConfig({
     defaultLocale: 'es',
     locales: ['es', 'en'],
     routing: { prefixDefaultLocale: false },
+  },
+  env: {
+    schema: {
+      SITE_ENV: envField.enum({
+        context: 'server',
+        access: 'public',
+        values: ['development', 'preview', 'production'],
+        default: 'development',
+      }),
+    },
   },
 });

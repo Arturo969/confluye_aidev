@@ -13,7 +13,7 @@ Proyecto gestionado con **AIDEV** (track: critical). Estado y siguiente paso: `d
 - Licencias: `npm run licenses` · CI y despliegue: `docs/06-ops/deployment.md`
 - Tests: `npm test` (vitest) · `npm run test:build` (build real con/sin `BASE_PATH`) · e2e + a11y: `npm run e2e` (Playwright + axe, 3 viewports) · `npm run lhci` (Lighthouse CI)
 - Lint / tipos: `npm run lint` (eslint + stylelint + prettier) · `npm run lint:fix` · `npm run format` · `npm run typecheck`. Reglas clave (probadas en `tests/unit/lint-rules.test.ts`): no-unsanitized, no-console en `src/`, adaptadores solo vía `factory`, no-cycle, solo `min-width` en media queries
-- Env: `PUBLIC_FORM_ADAPTER` (`demo`), `PUBLIC_FORM_ENDPOINT`, `SITE_ENV` (`preview`/`production`), `SITE_URL`, `BASE_PATH` (preview: `https://arturo969.github.io` + `/confluye_aidev/`) — ver `.env.example`. En Git Bash, exporta `MSYS_NO_PATHCONV=1` al pasar `BASE_PATH` (si no, MSYS lo convierte en ruta de Windows)
+- Env: `PUBLIC_FORM_ADAPTER` (`demo`), `PUBLIC_FORM_ENDPOINT`, `SITE_ENV` (`development` por defecto/`preview`/`production`; solo producción se indexa), `SITE_URL`, `BASE_PATH` (preview: `https://arturo969.github.io` + `/confluye_aidev/`) — ver `.env.example`. En Git Bash, exporta `MSYS_NO_PATHCONV=1` al pasar `BASE_PATH` (si no, MSYS lo convierte en ruta de Windows)
 
 ## Convenciones
 - Modo plan antes de cambios no triviales. TDD: test que falla → código → refactor.

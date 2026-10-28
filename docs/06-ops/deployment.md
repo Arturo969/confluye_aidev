@@ -19,6 +19,13 @@ Se ejecuta en cada PR y en push a `main`. Permisos `contents: read`; acciones fi
 
 Dependabot (`.github/dependabot.yml`): npm y github-actions semanal, agrupado, con `cooldown` de 7 días.
 
+## Preview — `.github/workflows/deploy-preview.yml` (T-004)
+- Se ejecuta en cada push a `main` (tras fusionar un PR con CI verde) o a mano (`workflow_dispatch`).
+- Job `build`: `withastro/action` con `SITE_ENV=preview`, `SITE_URL=https://arturo969.github.io`, `BASE_PATH=/confluye_aidev/`, `PUBLIC_FORM_ADAPTER=demo`.
+- Job `deploy`: único con permisos `pages: write` + `id-token: write`; entorno `github-pages` (solo acepta `main`).
+- Fuera de producción el sitio lleva `<meta name="robots" content="noindex, nofollow">`, `robots.txt` con `Disallow: /` y banner "Versión de prueba" (`src/lib/config/site-env.ts`, SR-05).
+- Requisito único: Settings → Pages → Source = **GitHub Actions**.
+
 - **Estrategia de despliegue**: atómica (el hosting estático publica el build completo).
-- **Rollback**: re-ejecutar el deploy del último commit bueno de `main` (o `git revert` + push); objetivo < 10 min. Se detalla en T-004/T-032.
+- **Rollback (preview)**: `git revert <commit>` en una rama + PR → al fusionar se republica; o Actions → deploy-preview → "Run workflow" sobre un commit anterior. Objetivo < 10 min. Producción: T-032.
 - **Migraciones de BD**: no aplica (sin BD).
