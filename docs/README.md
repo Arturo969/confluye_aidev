@@ -1,7 +1,5 @@
 # Documentación — confluye
 
-Generada y mantenida por AIDEV (hooks + agente doc-writer). Fuente de verdad: este directorio.
-
 | Ruta | Contenido |
 |------|-----------|
 | `STATE.md` | Estado, fase, siguiente paso (memoria entre sesiones) |
