@@ -1,7 +1,23 @@
-# Adaptar "package-ecosystem" al stack en /aidev:release (npm, pip, maven, gradle, nuget, gomod, cargo, composer, docker...).
+# Actualizaciones semanales agrupadas (SR-06, SR-07). Las mayores llegan en PR propio.
+# cooldown: no propone versiones publicadas hace menos de 7 días (paquetes comprometidos suelen retirarse antes).
 version: 2
 updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-patch:
+        update-types: [minor, patch]
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      actions-minor-patch:
+        update-types: [minor, patch]
