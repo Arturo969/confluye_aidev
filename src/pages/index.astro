@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { localePath } from '../lib/i18n/routes';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout lang="es" title="CONFLUYE">
+  <main>
+    <h1>CONFLUYE</h1>
+    <p>Personas que se encuentran. Bienestar que se construye.</p>
+    <a href={localePath('en', '', base)} hreflang="en" lang="en">English</a>
+  </main>
+</BaseLayout>

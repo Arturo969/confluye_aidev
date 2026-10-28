@@ -10,9 +10,9 @@ Proyecto gestionado con **AIDEV** (track: critical). Estado y siguiente paso: `d
 ## Comandos del proyecto
 - Instalar: `npm ci`
 - Ejecutar: `npm run dev` · build: `npm run build` (`astro check && astro build`) · `npm run preview`
-- Tests: `npm test` (vitest) · e2e + a11y: `npm run e2e` (Playwright + axe, 3 viewports) · `npm run lhci` (Lighthouse CI)
+- Tests: `npm test` (vitest) · `npm run test:build` (build real con/sin `BASE_PATH`) · e2e + a11y: `npm run e2e` (Playwright + axe, 3 viewports) · `npm run lhci` (Lighthouse CI)
 - Lint / tipos: `npm run lint` (eslint + stylelint + prettier) · `npm run typecheck`
-- Env: `PUBLIC_FORM_ADAPTER` (`demo`), `PUBLIC_FORM_ENDPOINT`, `SITE_ENV` (`preview`/`production`), `SITE_URL`, `BASE_PATH` — ver `.env.example`
+- Env: `PUBLIC_FORM_ADAPTER` (`demo`), `PUBLIC_FORM_ENDPOINT`, `SITE_ENV` (`preview`/`production`), `SITE_URL`, `BASE_PATH` — ver `.env.example`. En Git Bash, exporta `MSYS_NO_PATHCONV=1` al pasar `BASE_PATH` (si no, MSYS lo convierte en ruta de Windows)
 
 ## Convenciones
 - Modo plan antes de cambios no triviales. TDD: test que falla → código → refactor.

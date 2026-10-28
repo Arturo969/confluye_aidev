@@ -31,3 +31,8 @@ Thumbs.db
 
 # Temporales AIDEV
 .aidev-tmp/
+
+# Astro / pruebas
+.astro/
+test-results/
+playwright-report/
