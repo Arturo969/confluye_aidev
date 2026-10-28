@@ -9,16 +9,16 @@ secrets/
 
 # Dependencias y builds
 node_modules/
-vendor/
+/vendor/
 .venv/
 venv/
 __pycache__/
 *.pyc
-dist/
-build/
-target/
-bin/
-obj/
+/dist/
+/build/
+/target/
+/bin/
+/obj/
 coverage/
 .next/
 .nuxt/
