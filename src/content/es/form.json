@@ -1,0 +1,64 @@
+{
+  "title": "Hablemos",
+  "intro": "Cuéntanos qué necesitas y te responderemos por email.",
+  "fields": {
+    "name": {
+      "label": "Nombre"
+    },
+    "email": {
+      "label": "Email",
+      "hint": "Te responderemos a este correo."
+    },
+    "phone": {
+      "label": "Teléfono (opcional)",
+      "hint": "Con código de país, por ejemplo +51."
+    },
+    "type": {
+      "label": "Escribes como"
+    },
+    "organization": {
+      "label": "Organización"
+    },
+    "service": {
+      "label": "Servicio de interés"
+    },
+    "message": {
+      "label": "Mensaje (opcional)"
+    }
+  },
+  "types": {
+    "person": "Persona",
+    "organization": "Organización"
+  },
+  "servicePlaceholder": "Elige una opción",
+  "messageWarning": "No incluyas información de salud ni datos emocionales sensibles.",
+  "charCounter": "{count} de {max} caracteres",
+  "consentText": "Acepto que CONFLUYE use mis datos solo para responder a esta solicitud.",
+  "consentLinkLabel": "Política de privacidad",
+  "submit": "Enviar",
+  "sending": "Enviando…",
+  "errorSummaryTitle": "Revisa estos campos:",
+  "errors": {
+    "required": "Este campo es obligatorio.",
+    "too_long": "El texto es demasiado largo.",
+    "invalid": "El valor no es válido.",
+    "emailInvalid": "Escribe un email válido, por ejemplo nombre@dominio.com.",
+    "phoneInvalid": "Escribe un teléfono de 7 a 15 dígitos.",
+    "consentRequired": "Necesitamos tu consentimiento para responderte."
+  },
+  "status": {
+    "success": "Gracias, recibimos tu mensaje. Te responderemos pronto.",
+    "validation": "Revisa los campos marcados.",
+    "captcha": "No pudimos verificar que no eres un robot. Inténtalo de nuevo.",
+    "rateLimited": "Has enviado varios mensajes seguidos. Inténtalo más tarde.",
+    "network": "No pudimos enviar tu mensaje. Revisa tu conexión e inténtalo de nuevo.",
+    "timeout": "El envío está tardando demasiado. Inténtalo de nuevo.",
+    "server": "No pudimos enviar tu mensaje por un problema del servicio."
+  },
+  "fallback": {
+    "text": "También puedes escribirnos directamente:",
+    "emailLabel": "Escribir un email"
+  },
+  "noscript": "Para usar el formulario necesitas JavaScript. Puedes escribirnos por email:",
+  "demoNotice": "Formulario de prueba: tus datos no se envían ni se guardan."
+}

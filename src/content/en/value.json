@@ -1,0 +1,40 @@
+{
+  "title": "Our value",
+  "intro": [
+    "The enterprise offers specialized consulting in human and collective well-being, designed from a comprehensive and adaptable perspective.",
+    "Unlike an approach focused exclusively on individual care, it seeks to understand how personal experiences relate to the social environments in which people live, study, work and participate.",
+    "In this way, each intervention can address different dimensions of well-being at the same time:"
+  ],
+  "dimensions": [
+    {
+      "id": "personal",
+      "title": "Personal well-being",
+      "text": "self-knowledge, social-emotional skills, personal growth and quality of life."
+    },
+    {
+      "id": "relational",
+      "title": "Relational well-being",
+      "text": "communication, bonds, coexistence, trust and constructive conflict management."
+    },
+    {
+      "id": "group",
+      "title": "Group well-being",
+      "text": "cohesion, identity, belonging, collaboration and the emotional dynamics of groups."
+    },
+    {
+      "id": "organizational",
+      "title": "Organizational well-being",
+      "text": "climate, culture, working relationships, leadership, motivation and team development."
+    },
+    {
+      "id": "community",
+      "title": "Community well-being",
+      "text": "participation, community bonds, integration, social trust and strengthening of collective capacities."
+    },
+    {
+      "id": "educational",
+      "title": "Educational well-being",
+      "text": "social-emotional development, coexistence, relationships between students, teachers and families, and the creation of healthy learning environments."
+    }
+  ]
+}

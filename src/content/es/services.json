@@ -1,0 +1,41 @@
+{
+  "title": "Modalidades de servicio",
+  "intro": "El emprendimiento podrá ofrecer diferentes modalidades, lo que permitirá construir un modelo de negocio flexible:",
+  "items": {
+    "specialized-consulting": {
+      "label": "Consultorías especializadas",
+      "description": "análisis de necesidades y diseño de soluciones personalizadas."
+    },
+    "wellbeing-diagnostics": {
+      "label": "Diagnósticos de bienestar",
+      "description": "identificación de factores individuales, relacionales, grupales y organizacionales asociados al bienestar."
+    },
+    "workshops": {
+      "label": "Talleres y experiencias formativas",
+      "description": "actividades presenciales o virtuales dirigidas a diferentes públicos."
+    },
+    "intervention-programs": {
+      "label": "Programas de intervención",
+      "description": "procesos de acompañamiento de mediano o largo plazo."
+    },
+    "training": {
+      "label": "Capacitación",
+      "description": "formación de docentes, líderes, equipos, profesionales y agentes comunitarios."
+    },
+    "applied-research": {
+      "label": "Investigación aplicada",
+      "description": "estudios sobre bienestar, emociones, relaciones y dinámicas sociales."
+    },
+    "social-project-design": {
+      "label": "Diseño de proyectos sociales",
+      "description": "formulación de iniciativas orientadas al bienestar de comunidades y grupos específicos."
+    },
+    "organizational-support": {
+      "label": "Acompañamiento a organizaciones",
+      "description": "asesoría para desarrollar políticas, programas y estrategias de bienestar."
+    },
+    "not-sure": {
+      "label": "No estoy seguro/a"
+    }
+  }
+}

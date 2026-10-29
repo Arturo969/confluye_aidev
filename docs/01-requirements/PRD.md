@@ -246,7 +246,7 @@ Bloqueantes (impiden publicar o cerrar design):
 3. ¿El banco de datos está inscrito ante la ANPD (Registro Nacional de Protección de Datos Personales)? Si no, ¿se inscribirá antes del lanzamiento? (ver compliance.md).
 4. Dominio del sitio (¿existe? ¿quién lo registra y administra DNS?).
 5. ~~WhatsApp~~ → no aplica: retirado por el cliente (2026-10-27).
-6. Quién redacta y revisa la traducción al inglés (propuesta: Claude redacta, el cliente revisa).
+6. Traducción al inglés: borrador redactado por Claude en `src/content/en/` con `meta.draft: true` (2026-10-28); **pendiente de revisión del cliente** (bloquea producción, T-034).
 7. ~~Plazo de retención~~ → resuelto: hasta resolver la solicitud, máx. 12 meses.
 
 Importantes (afectan alcance o diseño, no bloquean el inicio de design):

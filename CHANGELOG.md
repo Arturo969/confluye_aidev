@@ -14,5 +14,6 @@ Formato [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) · versionad
 - T-003: CI en GitHub Actions (quality, e2e, supply-chain, secrets, workflow-lint, dependency-review), acciones por SHA, Dependabot npm/actions con cooldown, `npm run licenses` con excepción documentada de sharp (2026-10-28).
 - T-004: deploy de la preview en GitHub Pages (`deploy-preview.yml`), `SITE_ENV` tipado con `astro:env`, `noindex` + `robots.txt` + banner de prueba fuera de producción (2026-10-28).
 - T-005: núcleo del formulario — validación TS pura (RF-08), payload v1 con consentimiento, puerto `FormSubmitter` con timeout de 10 s, límite local de 3 envíos/min, adaptador demo con resultados forzables, fábrica, variables `PUBLIC_*` tipadas y guardia de build de producción (2026-10-28).
+- T-006: contenido i18n — esquemas zod estrictos, copy del cliente en español (fidelidad verificada por test), borrador en inglés con `draft` que bloquea producción, paridad de claves es/en, `site.json` con datos legales pendientes y redes demo (2026-10-28).
 ### Removed
 - Botón de WhatsApp retirado del alcance por decisión del cliente (2026-10-27).

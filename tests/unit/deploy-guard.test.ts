@@ -46,6 +46,11 @@ describe('assertDeployConfig', () => {
     ).toThrow(/captcha/i);
   });
 
+  it('rechaza producción si algún idioma sigue como borrador (RN-07)', () => {
+    expect(() => assertDeployConfig(validProduction, ['en'])).toThrow(/"en".*borrador/);
+    expect(() => assertDeployConfig({ SITE_ENV: 'preview' }, ['en'])).not.toThrow();
+  });
+
   it('enumera todos los problemas a la vez', () => {
     try {
       assertDeployConfig({ SITE_ENV: 'production' });

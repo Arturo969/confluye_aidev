@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "anchor": "concepto",
+      "label": "Quiénes somos"
+    },
+    {
+      "anchor": "valor",
+      "label": "Propuesta"
+    },
+    {
+      "anchor": "publicos",
+      "label": "Públicos"
+    },
+    {
+      "anchor": "modalidades",
+      "label": "Servicios"
+    },
+    {
+      "anchor": "enfoque",
+      "label": "Enfoque"
+    },
+    {
+      "anchor": "contacto",
+      "label": "Contacto"
+    }
+  ],
+  "menuOpen": "Abrir menú",
+  "menuClose": "Cerrar menú",
+  "skipLink": "Saltar al contenido",
+  "home": "CONFLUYE, inicio",
+  "langSwitch": {
+    "label": "English",
+    "targetName": "Ver el sitio en inglés"
+  }
+}

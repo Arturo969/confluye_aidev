@@ -1,0 +1,25 @@
+{
+  "email": "jesusarturo965@gmail.com",
+  "legalHolder": {
+    "name": "CONFLUYE",
+    "ruc": "[RUC]",
+    "address": "[DOMICILIO]"
+  },
+  "social": [
+    {
+      "network": "Instagram",
+      "url": "https://www.instagram.com/",
+      "demo": true
+    },
+    {
+      "network": "LinkedIn",
+      "url": "https://www.linkedin.com/",
+      "demo": true
+    },
+    {
+      "network": "Facebook",
+      "url": "https://www.facebook.com/",
+      "demo": true
+    }
+  ]
+}

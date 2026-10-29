@@ -1,0 +1,42 @@
+{
+  "title": "Our approach",
+  "positioning": "The enterprise seeks to position itself in a space that connects individual, relational and collective well-being.",
+  "premise": "This makes it possible to move from a view in which well-being is understood exclusively as each person's responsibility to a perspective that also asks:",
+  "questions": [
+    "How does a group feel?",
+    "How do its members relate to one another?",
+    "What emotions circulate within an organization or community?",
+    "What factors strengthen or erode its sense of belonging, trust, cohesion and well-being?"
+  ],
+  "closing": "This perspective makes it possible to design interventions that are not limited to working with isolated individuals, but that also consider the social environments that shape their experiences and behaviors.",
+  "impactTitle": "Expected social impact",
+  "impactIntro": "The enterprise seeks to generate impact at different levels:",
+  "impactLevels": [
+    {
+      "id": "individual",
+      "title": "Individual",
+      "text": "people with more resources to understand themselves, relate to others and face challenges."
+    },
+    {
+      "id": "relational",
+      "title": "Relational",
+      "text": "healthier bonds and stronger capacities for communication and coexistence."
+    },
+    {
+      "id": "group",
+      "title": "Group",
+      "text": "teams and groups with higher levels of cohesion, trust, participation and sense of belonging."
+    },
+    {
+      "id": "organizational",
+      "title": "Organizational",
+      "text": "institutions able to make well-being part of their culture and management."
+    },
+    {
+      "id": "community",
+      "title": "Community",
+      "text": "communities with greater capacity to identify their needs, strengthen their bonds and build collective responses."
+    }
+  ],
+  "synthesis": "In short, CONFLUYE aims to become a specialized platform for designing and developing experiences, services and solutions for human and collective well-being, bringing together scientific knowledge, participatory methodologies and social intervention strategies to help people and groups build healthier relationships, environments and communities."
+}

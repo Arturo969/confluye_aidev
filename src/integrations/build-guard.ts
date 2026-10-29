@@ -2,7 +2,13 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { AstroIntegration } from 'astro';
+import enMeta from '../content/en/meta.json';
+import esMeta from '../content/es/meta.json';
 import { assertDeployConfig, findDistViolations } from '../lib/config/deploy-guard';
+
+const DRAFT_LOCALES = Object.entries({ es: esMeta, en: enMeta })
+  .filter(([, meta]) => meta.draft)
+  .map(([locale]) => locale);
 
 const SCANNED = /\.(html|js|mjs)$/;
 
@@ -19,7 +25,7 @@ export function buildGuard(): AstroIntegration {
     hooks: {
       'astro:config:setup': ({ command }) => {
         // Los .env no se cargan en el config de Astro: la guardia lee el entorno del proceso.
-        if (command === 'build') assertDeployConfig(process.env);
+        if (command === 'build') assertDeployConfig(process.env, DRAFT_LOCALES);
       },
       'astro:build:done': async ({ dir, logger }) => {
         if (!isProductionBuild()) return;

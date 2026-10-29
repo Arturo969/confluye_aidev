@@ -1,0 +1,64 @@
+{
+  "title": "Let's talk",
+  "intro": "Tell us what you need and we will reply by email.",
+  "fields": {
+    "name": {
+      "label": "Name"
+    },
+    "email": {
+      "label": "Email",
+      "hint": "We will reply to this address."
+    },
+    "phone": {
+      "label": "Phone (optional)",
+      "hint": "Include the country code, for example +51."
+    },
+    "type": {
+      "label": "You are writing as"
+    },
+    "organization": {
+      "label": "Organization"
+    },
+    "service": {
+      "label": "Service of interest"
+    },
+    "message": {
+      "label": "Message (optional)"
+    }
+  },
+  "types": {
+    "person": "An individual",
+    "organization": "An organization"
+  },
+  "servicePlaceholder": "Choose an option",
+  "messageWarning": "Please do not include health information or sensitive emotional details.",
+  "charCounter": "{count} of {max} characters",
+  "consentText": "I agree that CONFLUYE may use my data only to respond to this request.",
+  "consentLinkLabel": "Privacy policy",
+  "submit": "Send",
+  "sending": "Sending…",
+  "errorSummaryTitle": "Please check these fields:",
+  "errors": {
+    "required": "This field is required.",
+    "too_long": "The text is too long.",
+    "invalid": "The value is not valid.",
+    "emailInvalid": "Enter a valid email, for example name@domain.com.",
+    "phoneInvalid": "Enter a phone number with 7 to 15 digits.",
+    "consentRequired": "We need your consent to reply to you."
+  },
+  "status": {
+    "success": "Thank you, we received your message. We will reply soon.",
+    "validation": "Please check the highlighted fields.",
+    "captcha": "We could not verify that you are not a robot. Please try again.",
+    "rateLimited": "You have sent several messages in a row. Please try again later.",
+    "network": "We could not send your message. Check your connection and try again.",
+    "timeout": "Sending is taking too long. Please try again.",
+    "server": "We could not send your message due to a service problem."
+  },
+  "fallback": {
+    "text": "You can also write to us directly:",
+    "emailLabel": "Send an email"
+  },
+  "noscript": "The form requires JavaScript. You can write to us by email:",
+  "demoNotice": "Test form: your data is not sent or stored."
+}

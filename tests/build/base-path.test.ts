@@ -49,14 +49,6 @@ describe('build con y sin BASE_PATH', () => {
 });
 
 describe('modo de sitio (SR-05)', () => {
-  it('producción es indexable, sin banner de prueba', () => {
-    const out = build(PRODUCTION);
-    const html = read(out, 'index.html');
-    expect(html).not.toContain('noindex');
-    expect(html).not.toContain('Versión de prueba');
-    expect(read(out, 'robots.txt')).not.toMatch(/Disallow: \/\s*$/m);
-  });
-
   it('preview no es indexable y muestra el banner', () => {
     const out = build({ SITE_ENV: 'preview' });
     expect(read(out, 'index.html')).toContain('noindex, nofollow');
@@ -65,7 +57,13 @@ describe('modo de sitio (SR-05)', () => {
   });
 });
 
+// Mientras el inglés sea borrador (RN-07) ningún build de producción puede pasar; el modo
+// indexable de producción se cubre en tests/unit/site-env.test.ts.
 describe('guardia de producción (SR-12)', () => {
+  it('falla si algún idioma sigue como borrador', () => {
+    expect(() => build(PRODUCTION)).toThrow(/"en" sigue como borrador/);
+  });
+
   it('falla si producción usa el formulario demo', () => {
     expect(() => build({ ...PRODUCTION, PUBLIC_FORM_ADAPTER: 'demo' })).toThrow(
       /PUBLIC_FORM_ADAPTER es "demo"/,
