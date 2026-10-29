@@ -62,18 +62,19 @@ Lista única: el formulario y la sección de modalidades (RF-05) consumen los mi
 | `not-sure` | No estoy seguro/a | I'm not sure |
 
 ## Modelo de contenido i18n
-Archivos `src/content/{es,en}/<seccion>.json` validados con zod (`src/content/schema.ts`); mismo árbol de claves en ambos idiomas (test de paridad + tipo inferido). Anclas de sección por idioma (`#contacto` / `#contact`) definidas en `nav.json`.
+Archivos `src/content/{es,en}/<seccion>.json` validados con zod (`src/content/schema.ts`, `z.strictObject`: claves ausentes o desconocidas fallan) y cargados con `getContent(locale)` (`src/lib/i18n/content.ts`, solo en build). Mismo árbol de claves en ambos idiomas (test de paridad con `keyPaths()`). Anclas **iguales en ambos idiomas** (`concepto`, `valor`, `publicos`, `modalidades`, `enfoque`, `contacto`; ux-a11y §2) para conservar el hash al cambiar de idioma. Copy en español literal del cliente, verificado por `tests/unit/content-fidelity.test.ts`.
 
 | Archivo | Claves principales |
 |---------|-------------------|
 | `seo.json` | `title` (≤ 60), `description` (≤ 160), `ogImageAlt` |
-| `nav.json` | `items[] {anchor, label}`, `menuOpen`, `menuClose`, `skipLink`, `langSwitch {label, targetName}` |
+| `meta.json` | `draft` (`true` en `en`: traducción sin revisar; bloquea producción, RN-07) |
+| `nav.json` | `items[] {anchor, label}`, `menuOpen`, `menuClose`, `skipLink`, `home`, `langSwitch {label, targetName}` |
 | `hero.json` | `tagline`, `lead`, `cta`, `image {alt}` |
-| `concept.json` | `title`, `concept`, `description`, `purpose` |
-| `value.json` | `title`, `intro`, `dimensions[6] {id, title, text}` |
-| `audiences.json` | `title`, `items[5] {id, title, text}` |
+| `concept.json` | `title`, `ideas[4] {term, meaning}`, `conceptTitle`, `concept`, `descriptionTitle`, `description[5]`, `purposeTitle`, `purpose` |
+| `value.json` | `title`, `intro[]`, `dimensions[6] {id, title, text}` |
+| `audiences.json` | `title`, `intro`, `items[5] {id, title, lines[]}` |
 | `services.json` | `title`, `intro`, `items` = registro `ServiceId → {label, description}` (8 modalidades; `not-sure` solo `label`) |
-| `approach.json` | `title`, `differential`, `impactLevels[5] {id, title, text}` |
+| `approach.json` | `title`, `positioning`, `premise`, `questions[4]`, `closing`, `impactTitle`, `impactIntro`, `impactLevels[5] {id, title, text}`, `synthesis` |
 | `form.json` | `title`, `intro`, `fields.<campo> {label, hint?}`, `types {person, organization}`, `messageWarning`, `consentText`, `consentLinkLabel`, `submit`, `sending`, `errors.<codigo>`, `errorSummaryTitle`, `status {success, validation, rateLimited, network, timeout, server}`, `fallback {text, emailLabel}`, `noscript`, `demoNotice` |
 | `footer.json` | `legalHolderLabel`, `privacyLink`, `contactLabel`, `socialLabel`, `copyright` |
 | `privacy.md` (colección `legal`) | frontmatter `title`, `version`, `updated`, `locale`; cuerpo Markdown con las secciones de RF-11 |

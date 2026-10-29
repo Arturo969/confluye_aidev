@@ -1,0 +1,40 @@
+{
+  "title": "Propuesta de valor",
+  "intro": [
+    "El emprendimiento ofrece consultorías especializadas en bienestar humano y colectivo, diseñadas desde una perspectiva integral y adaptable.",
+    "A diferencia de una propuesta centrada exclusivamente en la atención individual, busca comprender cómo las experiencias personales se relacionan con los entornos sociales en los que las personas viven, estudian, trabajan y participan.",
+    "De esta manera, cada intervención puede abordar simultáneamente diferentes dimensiones del bienestar:"
+  ],
+  "dimensions": [
+    {
+      "id": "personal",
+      "title": "Bienestar personal",
+      "text": "autoconocimiento, habilidades socioemocionales, desarrollo personal y calidad de vida."
+    },
+    {
+      "id": "relational",
+      "title": "Bienestar relacional",
+      "text": "comunicación, vínculos, convivencia, confianza y manejo constructivo de conflictos."
+    },
+    {
+      "id": "group",
+      "title": "Bienestar grupal",
+      "text": "cohesión, identidad, pertenencia, colaboración y dinámicas emocionales de los grupos."
+    },
+    {
+      "id": "organizational",
+      "title": "Bienestar organizacional",
+      "text": "clima, cultura, relaciones laborales, liderazgo, motivación y desarrollo de equipos."
+    },
+    {
+      "id": "community",
+      "title": "Bienestar comunitario",
+      "text": "participación, vínculos comunitarios, integración, confianza social y fortalecimiento de capacidades colectivas."
+    },
+    {
+      "id": "educational",
+      "title": "Bienestar educativo",
+      "text": "desarrollo socioemocional, convivencia, relaciones entre estudiantes, docentes y familias, y construcción de entornos educativos saludables."
+    }
+  ]
+}

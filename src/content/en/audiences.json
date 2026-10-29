@@ -1,0 +1,63 @@
+{
+  "title": "Who we work with",
+  "intro": "The versatility of the enterprise makes it possible to develop specific programs for different audiences:",
+  "items": [
+    {
+      "id": "children",
+      "title": "Children and adolescents",
+      "lines": [
+        "Development of social-emotional skills.",
+        "Coexistence and healthy relationships.",
+        "Prevention of violence and exclusion.",
+        "Strengthening self-esteem and social skills.",
+        "Programs for families and school communities."
+      ]
+    },
+    {
+      "id": "youth",
+      "title": "Young people",
+      "lines": [
+        "Personal growth and life plans.",
+        "Life skills.",
+        "Interpersonal relationships.",
+        "Social participation and sense of belonging.",
+        "Well-being in educational and work settings."
+      ]
+    },
+    {
+      "id": "adults",
+      "title": "Adults",
+      "lines": [
+        "Personal and relational well-being.",
+        "Managing life changes.",
+        "Development of social-emotional skills.",
+        "Family and social relationships.",
+        "Well-being and quality-of-life programs."
+      ]
+    },
+    {
+      "id": "organizations",
+      "title": "Organizations and teams",
+      "lines": [
+        "Well-being and climate assessment.",
+        "Team strengthening.",
+        "Communication and interpersonal relationships.",
+        "Leadership and organizational culture.",
+        "Prevention of factors that erode well-being.",
+        "Design of well-being strategies and programs."
+      ]
+    },
+    {
+      "id": "communities",
+      "title": "Communities and social groups",
+      "lines": [
+        "Assessment of social and relational dynamics.",
+        "Strengthening community bonds.",
+        "Participation and social cohesion.",
+        "Identity and sense of belonging.",
+        "Design of collective well-being projects.",
+        "Participatory processes to identify needs and build solutions."
+      ]
+    }
+  ]
+}

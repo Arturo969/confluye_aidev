@@ -5,7 +5,8 @@ import { DEMO_ADAPTER_MARKER } from '../form/markers';
 
 export type DeployEnv = Record<string, string | undefined>;
 
-export function assertDeployConfig(env: DeployEnv): void {
+/** `draftLocales`: idiomas con `meta.draft: true` (traducción sin revisar por el cliente). */
+export function assertDeployConfig(env: DeployEnv, draftLocales: readonly string[] = []): void {
   if (env['SITE_ENV'] !== 'production') return;
   const problems: string[] = [];
 
@@ -23,6 +24,12 @@ export function assertDeployConfig(env: DeployEnv): void {
 
   if ((env['PUBLIC_CAPTCHA_PROVIDER'] ?? 'none') === 'none') {
     problems.push('PUBLIC_CAPTCHA_PROVIDER es "none": producción exige captcha (RF-09).');
+  }
+
+  for (const locale of draftLocales) {
+    problems.push(
+      `El contenido "${locale}" sigue como borrador: requiere revisión del cliente (RN-07).`,
+    );
   }
 
   if (problems.length > 0) {

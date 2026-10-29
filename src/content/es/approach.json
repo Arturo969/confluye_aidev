@@ -1,0 +1,42 @@
+{
+  "title": "Enfoque diferencial",
+  "positioning": "El emprendimiento busca posicionarse en un espacio que conecta bienestar individual, bienestar relacional y bienestar colectivo.",
+  "premise": "Esto permite pasar de una visión en la que el bienestar se entiende exclusivamente como responsabilidad de cada persona hacia una perspectiva en la que también se pregunta:",
+  "questions": [
+    "¿Cómo se siente un grupo?",
+    "¿Cómo se relacionan sus integrantes?",
+    "¿Qué emociones circulan dentro de una organización o comunidad?",
+    "¿Qué factores favorecen o deterioran su sentido de pertenencia, confianza, cohesión y bienestar?"
+  ],
+  "closing": "Esta mirada permite diseñar intervenciones que no se limiten a trabajar con individuos aislados, sino que consideren también los entornos sociales que influyen en sus experiencias y comportamientos.",
+  "impactTitle": "Impacto social esperado",
+  "impactIntro": "El emprendimiento busca generar impacto en diferentes niveles:",
+  "impactLevels": [
+    {
+      "id": "individual",
+      "title": "Individual",
+      "text": "personas con mayores recursos para comprenderse, relacionarse y afrontar desafíos."
+    },
+    {
+      "id": "relational",
+      "title": "Relacional",
+      "text": "vínculos más saludables y capacidades fortalecidas para la comunicación y la convivencia."
+    },
+    {
+      "id": "group",
+      "title": "Grupal",
+      "text": "equipos y colectivos con mayores niveles de cohesión, confianza, participación y sentido de pertenencia."
+    },
+    {
+      "id": "organizational",
+      "title": "Organizacional",
+      "text": "instituciones capaces de incorporar el bienestar como parte de su cultura y gestión."
+    },
+    {
+      "id": "community",
+      "title": "Comunitario",
+      "text": "comunidades con mayores capacidades para identificar sus necesidades, fortalecer sus vínculos y construir respuestas colectivas."
+    }
+  ],
+  "synthesis": "En síntesis, CONFLUYE busca convertirse en una plataforma especializada en el diseño y desarrollo de experiencias, servicios y soluciones para el bienestar humano y colectivo, articulando conocimiento científico, metodologías participativas y estrategias de intervención social para contribuir a que las personas y los grupos puedan desarrollar relaciones, entornos y comunidades más saludables."
+}

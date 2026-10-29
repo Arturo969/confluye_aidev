@@ -1,0 +1,41 @@
+{
+  "title": "Ways we work",
+  "intro": "The enterprise can offer different service modalities, allowing for a flexible business model:",
+  "items": {
+    "specialized-consulting": {
+      "label": "Specialized consulting",
+      "description": "needs analysis and design of tailored solutions."
+    },
+    "wellbeing-diagnostics": {
+      "label": "Well-being assessments",
+      "description": "identification of individual, relational, group and organizational factors associated with well-being."
+    },
+    "workshops": {
+      "label": "Workshops and learning experiences",
+      "description": "in-person or online activities for different audiences."
+    },
+    "intervention-programs": {
+      "label": "Intervention programs",
+      "description": "medium- or long-term support processes."
+    },
+    "training": {
+      "label": "Training",
+      "description": "training for teachers, leaders, teams, professionals and community agents."
+    },
+    "applied-research": {
+      "label": "Applied research",
+      "description": "studies on well-being, emotions, relationships and social dynamics."
+    },
+    "social-project-design": {
+      "label": "Social project design",
+      "description": "formulation of initiatives aimed at the well-being of specific communities and groups."
+    },
+    "organizational-support": {
+      "label": "Organizational support",
+      "description": "advice to develop well-being policies, programs and strategies."
+    },
+    "not-sure": {
+      "label": "I'm not sure"
+    }
+  }
+}

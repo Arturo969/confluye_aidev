@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "anchor": "concepto",
+      "label": "About"
+    },
+    {
+      "anchor": "valor",
+      "label": "Value"
+    },
+    {
+      "anchor": "publicos",
+      "label": "Audiences"
+    },
+    {
+      "anchor": "modalidades",
+      "label": "Services"
+    },
+    {
+      "anchor": "enfoque",
+      "label": "Approach"
+    },
+    {
+      "anchor": "contacto",
+      "label": "Contact"
+    }
+  ],
+  "menuOpen": "Open menu",
+  "menuClose": "Close menu",
+  "skipLink": "Skip to content",
+  "home": "CONFLUYE, home",
+  "langSwitch": {
+    "label": "Español",
+    "targetName": "View the site in Spanish"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "title": "Públicos y ámbitos de intervención",
+  "intro": "La versatilidad del emprendimiento permitirá desarrollar programas específicos para diferentes públicos:",
+  "items": [
+    {
+      "id": "children",
+      "title": "Niños y adolescentes",
+      "lines": [
+        "Desarrollo de habilidades socioemocionales.",
+        "Convivencia y relaciones saludables.",
+        "Prevención de situaciones de violencia y exclusión.",
+        "Fortalecimiento de la autoestima y habilidades sociales.",
+        "Programas para familias y comunidades educativas."
+      ]
+    },
+    {
+      "id": "youth",
+      "title": "Jóvenes",
+      "lines": [
+        "Desarrollo personal y proyecto de vida.",
+        "Habilidades para la vida.",
+        "Relaciones interpersonales.",
+        "Participación social y sentido de pertenencia.",
+        "Bienestar en espacios educativos y laborales."
+      ]
+    },
+    {
+      "id": "adults",
+      "title": "Adultos",
+      "lines": [
+        "Bienestar personal y relacional.",
+        "Gestión de cambios vitales.",
+        "Desarrollo de habilidades socioemocionales.",
+        "Relaciones familiares y sociales.",
+        "Programas de bienestar y calidad de vida."
+      ]
+    },
+    {
+      "id": "organizations",
+      "title": "Organizaciones y equipos",
+      "lines": [
+        "Diagnóstico de bienestar y clima.",
+        "Fortalecimiento de equipos.",
+        "Comunicación y relaciones interpersonales.",
+        "Liderazgo y cultura organizacional.",
+        "Prevención de factores que deterioran el bienestar.",
+        "Diseño de estrategias y programas de bienestar."
+      ]
+    },
+    {
+      "id": "communities",
+      "title": "Comunidades y colectivos sociales",
+      "lines": [
+        "Diagnóstico de dinámicas sociales y relacionales.",
+        "Fortalecimiento de vínculos comunitarios.",
+        "Participación y cohesión social.",
+        "Identidad y sentido de pertenencia.",
+        "Diseño de proyectos de bienestar colectivo.",
+        "Procesos participativos para identificar necesidades y construir soluciones."
+      ]
+    }
+  ]
+}
