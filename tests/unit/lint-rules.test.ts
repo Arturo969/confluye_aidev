@@ -1,6 +1,6 @@
 import { ESLint } from 'eslint';
 import stylelint from 'stylelint';
-import { describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 
 // Prueba que las reglas de calidad y seguridad de verdad fallan (T-002, SR-03, SR-11, RF-13).
 const eslint = new ESLint();
@@ -14,6 +14,13 @@ async function stylelintWarnings(code: string, codeFilename: string): Promise<st
   const { results } = await stylelint.lint({ code, codeFilename });
   return (results[0]?.warnings ?? []).map((w) => w.rule);
 }
+
+// Cargar ESLint y Stylelint (config + plugins) tarda segundos con la máquina ocupada:
+// se precalienta una vez con margen amplio para que cada test no roce el timeout de 5 s.
+beforeAll(async () => {
+  await eslint.lintText('export {};\n', { filePath: 'src/warmup.ts' });
+  await stylelint.lint({ code: 'a {}\n', codeFilename: 'src/warmup.css' });
+}, 60_000);
 
 describe('ESLint', () => {
   it('bloquea innerHTML con datos no confiables (XSS)', async () => {

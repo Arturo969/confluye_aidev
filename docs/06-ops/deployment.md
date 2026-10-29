@@ -2,7 +2,18 @@
 
 - **Entornos**: local (`npm run dev`) · preview en GitHub Pages (`https://arturo969.github.io/confluye_aidev/`, formulario demo, `noindex`; T-004) · producción en Vercel o Netlify (pendiente, M5).
 - **Artefacto**: sitio estático en `dist/` (`npm run build`); el mismo build sirve en cualquier hosting estático.
-- **Configuración por entorno** (variables, nunca secretos en cliente): `SITE_URL`, `BASE_PATH`, `SITE_ENV`, `PUBLIC_FORM_ADAPTER`, `PUBLIC_FORM_ENDPOINT` — ver `.env.example` y ADR-0004.
+- **Configuración por entorno** (variables, nunca secretos en cliente; tipadas en `astro.config.mjs` → `env.schema`):
+
+| Variable | Valores | Por defecto | Uso |
+|----------|---------|-------------|-----|
+| `SITE_URL` / `BASE_PATH` | URL / ruta | `http://localhost:4321` / `/` | `site` y `base` de Astro (ADR-0004) |
+| `SITE_ENV` | `development` · `preview` · `production` | `development` | solo `production` se indexa y activa la guardia |
+| `PUBLIC_FORM_ADAPTER` | `demo` · `formspree` · `web3forms` · `netlify` | `demo` | adaptador del formulario (ADR-0003); reales pendientes de T-031 |
+| `PUBLIC_FORM_ENDPOINT` | URL `https://` | — | obligatorio en producción |
+| `PUBLIC_CAPTCHA_PROVIDER` | `none` · `turnstile` · `hcaptcha` | `none` | producción exige ≠ `none` |
+| `PUBLIC_CAPTCHA_SITE_KEY` | clave pública | — | si hay captcha |
+
+- **Guardia de producción** (`src/integrations/build-guard.ts`, SR-12): con `SITE_ENV=production` el build **falla** si el adaptador es `demo`, falta el endpoint `https://` o no hay captcha; al terminar escanea `dist/` y falla si encuentra el adaptador demo, `TODO` o placeholders tipo `[RUC]`.
 - **Repositorio**: `https://github.com/Arturo969/confluye_aidev` · rama `main` protegida (PR + checks obligatorios).
 
 ## CI — `.github/workflows/ci.yml` (T-003)

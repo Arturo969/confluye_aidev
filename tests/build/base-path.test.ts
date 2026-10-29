@@ -7,14 +7,21 @@ import { afterAll, describe, expect, it } from 'vitest';
 const ASTRO_BIN = join('node_modules', 'astro', 'bin', 'astro.mjs');
 // Vitest inyecta variables de Vite en process.env; el build hijo no debe heredarlas.
 const VITE_INJECTED = /^(BASE_URL|MODE|DEV|PROD|SSR|VITEST.*)$/;
-const CONTROLLED = new Set(['BASE_PATH', 'SITE_ENV']);
+const CONTROLLED = /^(BASE_PATH|SITE_ENV|PUBLIC_.*)$/;
+// Producción ficticia pero válida para la guardia (adaptador real + https + captcha).
+const PRODUCTION = {
+  SITE_ENV: 'production',
+  PUBLIC_FORM_ADAPTER: 'formspree',
+  PUBLIC_FORM_ENDPOINT: 'https://formspree.io/f/test',
+  PUBLIC_CAPTCHA_PROVIDER: 'turnstile',
+};
 const outDirs: string[] = [];
 
 function build(overrides: Record<string, string> = {}): string {
   const outDir = mkdtempSync(join(tmpdir(), 'confluye-build-'));
   outDirs.push(outDir);
   const inherited = Object.entries(process.env).filter(
-    ([key]) => !CONTROLLED.has(key) && !VITE_INJECTED.test(key),
+    ([key]) => !CONTROLLED.test(key) && !VITE_INJECTED.test(key),
   );
   const env = { ...Object.fromEntries(inherited), ...overrides };
   execFileSync(process.execPath, [ASTRO_BIN, 'build', '--outDir', outDir], { env, stdio: 'pipe' });
@@ -43,7 +50,7 @@ describe('build con y sin BASE_PATH', () => {
 
 describe('modo de sitio (SR-05)', () => {
   it('producción es indexable, sin banner de prueba', () => {
-    const out = build({ SITE_ENV: 'production' });
+    const out = build(PRODUCTION);
     const html = read(out, 'index.html');
     expect(html).not.toContain('noindex');
     expect(html).not.toContain('Versión de prueba');
@@ -55,5 +62,13 @@ describe('modo de sitio (SR-05)', () => {
     expect(read(out, 'index.html')).toContain('noindex, nofollow');
     expect(read(out, 'en', 'index.html')).toContain('Preview version');
     expect(read(out, 'robots.txt')).toMatch(/Disallow: \/\s*$/m);
+  });
+});
+
+describe('guardia de producción (SR-12)', () => {
+  it('falla si producción usa el formulario demo', () => {
+    expect(() => build({ ...PRODUCTION, PUBLIC_FORM_ADAPTER: 'demo' })).toThrow(
+      /PUBLIC_FORM_ADAPTER es "demo"/,
+    );
   });
 });

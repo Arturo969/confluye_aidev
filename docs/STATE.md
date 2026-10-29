@@ -2,14 +2,14 @@
 Track: critical · Fase actual: 4-build (M0) · Actualizado: 2026-10-28
 
 ## Siguiente paso
-- Usuario: abrir PR de `feat/T-004-pages-preview`, activar Settings → Pages → Source = GitHub Actions y fusionar; verificar `https://arturo969.github.io/confluye_aidev/` (noindex, banner, /en/). Luego `/aidev:build T-005` (núcleo del formulario, TDD).
+- Usuario: PR de `feat/T-005-form-core` → merge con CI verde. Luego `/aidev:build T-006` (contenido i18n: esquemas zod, copy es + borrador en con `draft`, paridad de claves).
 
 ## Hecho recientemente
+- 2026-10-28 T-005: núcleo del formulario (schema, payload, submitter+timeout, rate limit, demo, factory, deploy-guard + integración); 94 unit (estables 5/5 tras precalentar ESLint), cobertura 99/97 %, prod+demo falla el build. T-004 verificado en la URL; ruleset de main creado por el usuario.
 - 2026-10-28 T-004 (pendiente verificar URL): workflow deploy-preview (permisos solo en deploy), SITE_ENV con astro:env, noindex/robots/banner fuera de producción; 24 unit + 4 build + 5 e2e verdes (también con BASE_PATH de Pages). T-003 fusionado (PR #4, CI 6/6 verde).
 - 2026-10-28 T-003: remoto `Arturo969/confluye_aidev` (main = T-002 subido); CI de 6 jobs con acciones por SHA, Dependabot con cooldown, script de licencias propio; actionlint y zizmor sin hallazgos en local.
 - 2026-10-28 T-002 hecho: ESLint 10 + Prettier + Stylelint; 10 tests prueban que XSS (innerHTML/document.write), console, import de adaptadores, ciclos y max-width fallan. Pendiente: npm bloqueó el postinstall de `unrs-resolver` (no hace falta: no-cycle verificado).
 - 2026-10-28 T-001 hecho: Astro 7.4.2, i18n es/en, `site`/`base` por env; tests unit (100 % cobertura routes), build con/sin BASE_PATH y e2e `lang` verdes (también con base). Commit base de docs en main.
-- 2026-10-28 Gate 3 aprobado: backlog de 26 tareas en 6 hitos (M0 esqueleto → M5 producción bloqueada), trazado a todos los RF Must/RNF/SR; test-strategy (vitest ≥ 90 % src/lib, msw contrato, Playwright 3×3 + axe, LHCI). EN = borrador `draft` (visible en preview, bloquea producción).
 
 ## Gates
 | Fase | Estado |
